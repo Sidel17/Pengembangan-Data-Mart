@@ -1,0 +1,999 @@
+﻿<Database xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Anggaran Dana OLAP Cube</ID>
+  <Name>Anggaran Dana OLAP Cube</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <LastUpdate>0001-01-01T00:00:00Z</LastUpdate>
+  <DataSourceImpersonationInfo>
+    <ImpersonationMode>Default</ImpersonationMode>
+    <ImpersonationInfoSecurity>Unchanged</ImpersonationInfoSecurity>
+  </DataSourceImpersonationInfo>
+  <Dimensions>
+    <Dimension>
+      <ID>Dim Anggaran</ID>
+      <Name>Dim Anggaran</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+          <Value>false</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+          <Value>100</Value>
+        </Annotation>
+      </Annotations>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Source xsi:type="DataSourceViewBinding">
+        <DataSourceViewID>dsvProject DWBI</DataSourceViewID>
+      </Source>
+      <ErrorConfiguration>
+        <KeyNotFound>ReportAndStop</KeyNotFound>
+        <KeyDuplicate>ReportAndStop</KeyDuplicate>
+        <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+      </ErrorConfiguration>
+      <CurrentStorageMode>Molap</CurrentStorageMode>
+      <Attributes>
+        <Attribute>
+          <ID>Pk Anggaran</ID>
+          <Name>Pk Anggaran</Name>
+          <Usage>Key</Usage>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>BigInt</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_anggaran</TableID>
+                <ColumnID>pk_anggaran</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+      </Attributes>
+      <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+    </Dimension>
+    <Dimension>
+      <ID>Dim Proker</ID>
+      <Name>Dim Proker</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+          <Value>false</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+          <Value>100</Value>
+        </Annotation>
+      </Annotations>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Source xsi:type="DataSourceViewBinding">
+        <DataSourceViewID>dsvProject DWBI</DataSourceViewID>
+      </Source>
+      <ErrorConfiguration>
+        <KeyNotFound>ReportAndStop</KeyNotFound>
+        <KeyDuplicate>ReportAndStop</KeyDuplicate>
+        <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+      </ErrorConfiguration>
+      <CurrentStorageMode>Molap</CurrentStorageMode>
+      <Attributes>
+        <Attribute>
+          <ID>Pk Proker</ID>
+          <Name>Pk Proker</Name>
+          <Usage>Key</Usage>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>BigInt</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_proker</TableID>
+                <ColumnID>pk_proker</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+      </Attributes>
+      <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+    </Dimension>
+    <Dimension>
+      <ID>Dim Kegiatan</ID>
+      <Name>Dim Kegiatan</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+          <Value>false</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+          <Value>100</Value>
+        </Annotation>
+      </Annotations>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Source xsi:type="DataSourceViewBinding">
+        <DataSourceViewID>dsvProject DWBI</DataSourceViewID>
+      </Source>
+      <ErrorConfiguration>
+        <KeyNotFound>ReportAndStop</KeyNotFound>
+        <KeyDuplicate>ReportAndStop</KeyDuplicate>
+        <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+      </ErrorConfiguration>
+      <CurrentStorageMode>Molap</CurrentStorageMode>
+      <Attributes>
+        <Attribute>
+          <ID>Pk Kegiatan</ID>
+          <Name>Pk Kegiatan</Name>
+          <Usage>Key</Usage>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>BigInt</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_kegiatan</TableID>
+                <ColumnID>pk_kegiatan</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+      </Attributes>
+      <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+    </Dimension>
+    <Dimension>
+      <ID>Dim Himapro</ID>
+      <Name>Dim Himapro</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+          <Value>false</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+          <Value>100</Value>
+        </Annotation>
+      </Annotations>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Source xsi:type="DataSourceViewBinding">
+        <DataSourceViewID>dsvProject DWBI</DataSourceViewID>
+      </Source>
+      <ErrorConfiguration>
+        <KeyNotFound>ReportAndStop</KeyNotFound>
+        <KeyDuplicate>ReportAndStop</KeyDuplicate>
+        <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+      </ErrorConfiguration>
+      <CurrentStorageMode>Molap</CurrentStorageMode>
+      <Attributes>
+        <Attribute>
+          <ID>Pk Himapro</ID>
+          <Name>Pk Himapro</Name>
+          <Usage>Key</Usage>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>BigInt</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_himapro</TableID>
+                <ColumnID>pk_himapro</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+      </Attributes>
+      <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+    </Dimension>
+    <Dimension>
+      <ID>Dim Date</ID>
+      <Name>Dim Date</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+          <Value>false</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+          <Value>100</Value>
+        </Annotation>
+      </Annotations>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Source xsi:type="DataSourceViewBinding">
+        <DataSourceViewID>dsvProject DWBI</DataSourceViewID>
+      </Source>
+      <ErrorConfiguration>
+        <KeyNotFound>ReportAndStop</KeyNotFound>
+        <KeyDuplicate>ReportAndStop</KeyDuplicate>
+        <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+      </ErrorConfiguration>
+      <CurrentStorageMode>Molap</CurrentStorageMode>
+      <Attributes>
+        <Attribute>
+          <ID>Pk Date</ID>
+          <Name>Pk Date</Name>
+          <Usage>Key</Usage>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>SmallInt</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_date</TableID>
+                <ColumnID>pk_date</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+      </Attributes>
+      <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+    </Dimension>
+  </Dimensions>
+  <Cubes>
+    <Cube>
+      <ID>cubeProject DWBI</ID>
+      <Name>cubeProject DWBI</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+          <Value>false</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+          <Value>100</Value>
+        </Annotation>
+      </Annotations>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Dimensions>
+        <Dimension>
+          <ID>Dim Anggaran</ID>
+          <Name>Dim Anggaran</Name>
+          <DimensionID>Dim Anggaran</DimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>Pk Anggaran</AttributeID>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension>
+          <ID>Dim Proker</ID>
+          <Name>Dim Proker</Name>
+          <DimensionID>Dim Proker</DimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>Pk Proker</AttributeID>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension>
+          <ID>Dim Kegiatan</ID>
+          <Name>Dim Kegiatan</Name>
+          <DimensionID>Dim Kegiatan</DimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>Pk Kegiatan</AttributeID>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension>
+          <ID>Dim Himapro</ID>
+          <Name>Dim Himapro</Name>
+          <DimensionID>Dim Himapro</DimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>Pk Himapro</AttributeID>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension>
+          <ID>Dim Date</ID>
+          <Name>Dim Date</Name>
+          <DimensionID>Dim Date</DimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>Pk Date</AttributeID>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <MeasureGroups>
+        <MeasureGroup>
+          <ID>Fact Realisasi Kegiatan</ID>
+          <Name>Fact Realisasi Kegiatan</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Measures>
+            <Measure>
+              <ID>Jumlah Uang Diajukan</ID>
+              <Name>Jumlah Uang Diajukan</Name>
+              <Source>
+                <DataType>BigInt</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_fact_realisasi_kegiatan</TableID>
+                  <ColumnID>jumlah_uang_diajukan</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Jumlah Uang Diterima</ID>
+              <Name>Jumlah Uang Diterima</Name>
+              <Source>
+                <DataType>BigInt</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_fact_realisasi_kegiatan</TableID>
+                  <ColumnID>jumlah_uang_diterima</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Jumlah Uang Digunakan</ID>
+              <Name>Jumlah Uang Digunakan</Name>
+              <Source>
+                <DataType>BigInt</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_fact_realisasi_kegiatan</TableID>
+                  <ColumnID>jumlah_uang_digunakan</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Jumlah Uang Dikembalikan</ID>
+              <Name>Jumlah Uang Dikembalikan</Name>
+              <Source>
+                <DataType>BigInt</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_fact_realisasi_kegiatan</TableID>
+                  <ColumnID>jumlah_uang_dikembalikan</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Jumlah Peserta</ID>
+              <Name>Jumlah Peserta</Name>
+              <Source>
+                <DataType>BigInt</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_fact_realisasi_kegiatan</TableID>
+                  <ColumnID>jumlah_peserta</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Jumlah Panitia</ID>
+              <Name>Jumlah Panitia</Name>
+              <Source>
+                <DataType>BigInt</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_fact_realisasi_kegiatan</TableID>
+                  <ColumnID>jumlah_panitia</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Fact Realisasi Kegiatan Count</ID>
+              <Name>Fact Realisasi Kegiatan Count</Name>
+              <AggregateFunction>Count</AggregateFunction>
+              <Source>
+                <DataType>Integer</DataType>
+                <DataSize>4</DataSize>
+                <Source xsi:type="RowBinding">
+                  <TableID>dbo_fact_realisasi_kegiatan</TableID>
+                </Source>
+              </Source>
+            </Measure>
+          </Measures>
+          <StorageMode>Molap</StorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <Dimensions>
+            <Dimension xsi:type="RegularMeasureGroupDimension">
+              <CubeDimensionID>Dim Anggaran</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Pk Anggaran</AttributeID>
+                  <KeyColumns>
+                    <KeyColumn>
+                      <DataType>BigInt</DataType>
+                      <Source xsi:type="ColumnBinding">
+                        <TableID>dbo_fact_realisasi_kegiatan</TableID>
+                        <ColumnID>fk_anggaran</ColumnID>
+                      </Source>
+                    </KeyColumn>
+                  </KeyColumns>
+                  <Type>Granularity</Type>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension xsi:type="RegularMeasureGroupDimension">
+              <CubeDimensionID>Dim Proker</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Pk Proker</AttributeID>
+                  <KeyColumns>
+                    <KeyColumn>
+                      <DataType>BigInt</DataType>
+                      <Source xsi:type="ColumnBinding">
+                        <TableID>dbo_fact_realisasi_kegiatan</TableID>
+                        <ColumnID>fk_proker</ColumnID>
+                      </Source>
+                    </KeyColumn>
+                  </KeyColumns>
+                  <Type>Granularity</Type>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension xsi:type="RegularMeasureGroupDimension">
+              <CubeDimensionID>Dim Kegiatan</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Pk Kegiatan</AttributeID>
+                  <KeyColumns>
+                    <KeyColumn>
+                      <DataType>BigInt</DataType>
+                      <Source xsi:type="ColumnBinding">
+                        <TableID>dbo_fact_realisasi_kegiatan</TableID>
+                        <ColumnID>fk_kegiatan</ColumnID>
+                      </Source>
+                    </KeyColumn>
+                  </KeyColumns>
+                  <Type>Granularity</Type>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension xsi:type="RegularMeasureGroupDimension">
+              <CubeDimensionID>Dim Himapro</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Pk Himapro</AttributeID>
+                  <KeyColumns>
+                    <KeyColumn>
+                      <DataType>BigInt</DataType>
+                      <Source xsi:type="ColumnBinding">
+                        <TableID>dbo_fact_realisasi_kegiatan</TableID>
+                        <ColumnID>fk_himapro</ColumnID>
+                      </Source>
+                    </KeyColumn>
+                  </KeyColumns>
+                  <Type>Granularity</Type>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension xsi:type="RegularMeasureGroupDimension">
+              <CubeDimensionID>Dim Date</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Pk Date</AttributeID>
+                  <KeyColumns>
+                    <KeyColumn>
+                      <DataType>SmallInt</DataType>
+                      <Source xsi:type="ColumnBinding">
+                        <TableID>dbo_fact_realisasi_kegiatan</TableID>
+                        <ColumnID>fk_date</ColumnID>
+                      </Source>
+                    </KeyColumn>
+                  </KeyColumns>
+                  <Type>Granularity</Type>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+          </Dimensions>
+          <Partitions>
+            <Partition>
+              <ID>Fact Realisasi Kegiatan</ID>
+              <Name>Fact Realisasi Kegiatan</Name>
+              <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+              <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+              <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+              <State>Unprocessed</State>
+              <Source xsi:type="DsvTableBinding">
+                <DataSourceViewID>dsvProject DWBI</DataSourceViewID>
+                <TableID>dbo_fact_realisasi_kegiatan</TableID>
+              </Source>
+              <StorageMode>Molap</StorageMode>
+              <CurrentStorageMode>Molap</CurrentStorageMode>
+              <ProcessingMode>Regular</ProcessingMode>
+            </Partition>
+          </Partitions>
+        </MeasureGroup>
+      </MeasureGroups>
+      <Source>
+        <DataSourceViewID>dsvProject DWBI</DataSourceViewID>
+      </Source>
+    </Cube>
+  </Cubes>
+  <DataSources>
+    <DataSource xsi:type="RelationalDataSource">
+      <ID>Project DWBI</ID>
+      <Name>Project DWBI</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <ConnectionString>Provider=SQLNCLI11.1;Data Source=DESKTOP-SSE3LD6\SQLEXPRESS;Integrated Security=SSPI;Initial Catalog=projectDWBI</ConnectionString>
+      <ConnectionStringSecurity>Unchanged</ConnectionStringSecurity>
+      <ImpersonationInfo>
+        <ImpersonationMode>Default</ImpersonationMode>
+        <ImpersonationInfoSecurity>Unchanged</ImpersonationInfoSecurity>
+      </ImpersonationInfo>
+      <Timeout>PT0S</Timeout>
+    </DataSource>
+  </DataSources>
+  <DataSourceViews>
+    <DataSourceView>
+      <ID>dsvProject DWBI</ID>
+      <Name>dsvProject DWBI</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+          <Value>_ALL_TABLES_</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+          <Value>
+            <Layouts xmlns="">
+              <Diagram>
+                <Name>_ALL_TABLES_</Name>
+                <DiagramLayout />
+                <ShowRelationshipNames>False</ShowRelationshipNames>
+                <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+                <DiagramViewPortLeft>0</DiagramViewPortLeft>
+                <DiagramViewPortTop>0</DiagramViewPortTop>
+                <DiagramBoundingLeft>0</DiagramBoundingLeft>
+                <DiagramBoundingTop>0</DiagramBoundingTop>
+                <DiagramZoom>100</DiagramZoom>
+              </Diagram>
+            </Layouts>
+          </Value>
+        </Annotation>
+      </Annotations>
+      <DataSourceID>Project DWBI</DataSourceID>
+      <Schema>
+        <xs:schema id="dsvProject_x0020_DWBI" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+          <xs:element name="dsvProject_x0020_DWBI" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="882946f0-4596-440b-b53f-c24c1530f2a5">
+            <xs:complexType>
+              <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:element name="dbo_dim_anggaran" msprop:design-time-name="8fb0ff56-d303-4e22-9f2b-e5fe9d90aaa7" msprop:FriendlyName="dim_anggaran" msprop:DbSchemaName="dbo" msprop:DbTableName="dim_anggaran" msprop:TableType="Table">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="kode_anggaran" msprop:design-time-name="da9d4fa0-0fb3-40e7-b504-09e00dd32019" msprop:DbColumnName="kode_anggaran" msprop:FriendlyName="kode_anggaran">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="6" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="penanggung_jawab" msprop:design-time-name="4d1d4adf-b4e9-4947-86d1-b72fa0af4e65" msprop:DbColumnName="penanggung_jawab" msprop:FriendlyName="penanggung_jawab">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="50" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="nama_kegiatan" msprop:design-time-name="2a739763-deb7-4fea-9897-effd3cb5ec3d" msprop:DbColumnName="nama_kegiatan" msprop:FriendlyName="nama_kegiatan">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="110" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="nama_atasan" msprop:design-time-name="d50edd14-e277-4260-8ee4-e8dbd2d790bf" msprop:DbColumnName="nama_atasan" msprop:FriendlyName="nama_atasan">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="40" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="jumlah_anggaran_kegiatan" msprop:design-time-name="7b37ca4e-ea32-4ab4-88c1-d5ba239c85fe" msprop:DbColumnName="jumlah_anggaran_kegiatan" msprop:FriendlyName="jumlah_anggaran_kegiatan">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="25" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="nama_keuangan" msprop:design-time-name="95c3e5d8-05d0-4829-91c3-66984aa8274e" msprop:DbColumnName="nama_keuangan" msprop:FriendlyName="nama_keuangan">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="19" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="pk_anggaran" msprop:design-time-name="678674a0-47fe-4317-94cc-c4d866d8cd72" msprop:DbColumnName="pk_anggaran" msprop:FriendlyName="pk_anggaran" type="xs:long" />
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="dbo_dim_date" msprop:design-time-name="19123813-762a-44f9-9a1b-009d6c5d3f81" msprop:FriendlyName="dim_date" msprop:DbSchemaName="dbo" msprop:DbTableName="dim_date" msprop:TableType="Table">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="pk_date" msprop:design-time-name="72d9ace5-0347-4ea9-8bf6-bfe410fd3704" msprop:DbColumnName="pk_date" msprop:FriendlyName="pk_date" type="xs:short" />
+                      <xs:element name="day_number" msprop:design-time-name="479bdfd7-a871-4a4f-bee6-77381e2a8d23" msprop:DbColumnName="day_number" msprop:FriendlyName="day_number" type="xs:short" />
+                      <xs:element name="year_number" msprop:design-time-name="403b4c58-7c06-4bbf-beaf-af6288562a99" msprop:DbColumnName="year_number" msprop:FriendlyName="year_number" type="xs:short" />
+                      <xs:element name="month_number" msprop:design-time-name="653206ef-8774-494f-8a01-494d72af122c" msprop:DbColumnName="month_number" msprop:FriendlyName="month_number" type="xs:short" />
+                      <xs:element name="day_name" msprop:design-time-name="9a4a5108-5c34-4299-9fcf-fe06e63c1d4d" msprop:DbColumnName="day_name" msprop:FriendlyName="day_name">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="10" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="weekend_ind" msprop:design-time-name="37eb3321-5fd4-4a7f-ba25-85e5f5be1d44" msprop:DbColumnName="weekend_ind" msprop:FriendlyName="weekend_ind">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="3" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="week_name" msprop:design-time-name="21959b27-70f2-44fb-b1d2-d5b6bc92aee4" msprop:DbColumnName="week_name" msprop:FriendlyName="week_name">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="3" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="dbo_dim_himapro" msprop:design-time-name="c9f2dcce-8e6a-418d-aaaa-d67763b4f4ff" msprop:FriendlyName="dim_himapro" msprop:DbSchemaName="dbo" msprop:DbTableName="dim_himapro" msprop:TableType="Table">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="kode_himapro" msprop:design-time-name="6f87c874-824f-4625-8835-bd90337206b6" msprop:DbColumnName="kode_himapro" msprop:FriendlyName="kode_himapro">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="5" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="nama_himapro" msprop:design-time-name="535611fd-a07c-45bd-b088-a3dd33984679" msprop:DbColumnName="nama_himapro" msprop:FriendlyName="nama_himapro" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="28" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="nama_ketua" msprop:design-time-name="b2266256-40f6-4ee6-a5f9-53da558a446f" msprop:DbColumnName="nama_ketua" msprop:FriendlyName="nama_ketua" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="64" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="pk_himapro" msprop:design-time-name="76ce4bf0-51c3-4d7a-ac9d-3e725e5358b4" msprop:DbColumnName="pk_himapro" msprop:FriendlyName="pk_himapro" type="xs:long" />
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="dbo_dim_kegiatan" msprop:design-time-name="3efd6fda-37fb-431b-bbdb-2b754e024ed8" msprop:FriendlyName="dim_kegiatan" msprop:DbSchemaName="dbo" msprop:DbTableName="dim_kegiatan" msprop:TableType="Table">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="id_kegiatan" msprop:design-time-name="8c844875-611a-4ce1-9f4d-cc21ed4c8868" msprop:DbColumnName="id_kegiatan" msprop:FriendlyName="id_kegiatan">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="6" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="sequence" msprop:design-time-name="63ed7a40-8296-4def-af34-497de5135b87" msprop:DbColumnName="sequence" msprop:FriendlyName="sequence" type="xs:long" />
+                      <xs:element name="nama_kegiatan" msprop:design-time-name="56fd36e5-ad5c-419c-87a2-037746e08b60" msprop:DbColumnName="nama_kegiatan" msprop:FriendlyName="nama_kegiatan">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="102" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="person_int_charge" msprop:design-time-name="d16d1fa1-d2f4-4feb-8ac6-53dd05294a5e" msprop:DbColumnName="person_int_charge" msprop:FriendlyName="person_int_charge">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="225" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="hari_pelaksanaan" msprop:design-time-name="2cea67c7-aed3-4c73-8f1f-8e45640610b3" msprop:DbColumnName="hari_pelaksanaan" msprop:FriendlyName="hari_pelaksanaan" type="xs:long" minOccurs="0" />
+                      <xs:element name="bulan_pelaksanaan" msprop:design-time-name="f05ea934-2f4b-4748-b496-691c362439fe" msprop:DbColumnName="bulan_pelaksanaan" msprop:FriendlyName="bulan_pelaksanaan" type="xs:long" minOccurs="0" />
+                      <xs:element name="tahun_pelaksanaan" msprop:design-time-name="79f23bc8-757b-44d8-8392-58d922715009" msprop:DbColumnName="tahun_pelaksanaan" msprop:FriendlyName="tahun_pelaksanaan" type="xs:long" minOccurs="0" />
+                      <xs:element name="pk_kegiatan" msprop:design-time-name="865ccdb7-e157-4fcd-9e40-a0c2146c70c2" msprop:DbColumnName="pk_kegiatan" msprop:FriendlyName="pk_kegiatan" type="xs:long" />
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="dbo_dim_proker" msprop:design-time-name="1ac8d879-1ae3-4c11-ba51-5174adafd902" msprop:FriendlyName="dim_proker" msprop:DbSchemaName="dbo" msprop:DbTableName="dim_proker" msprop:TableType="Table">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="kode_proker" msprop:design-time-name="00857766-bc7f-4212-92e1-4db096d97a5e" msprop:DbColumnName="kode_proker" msprop:FriendlyName="kode_proker">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="6" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="nama_kegiatan" msprop:design-time-name="672c0533-3ec5-46a8-bb54-1ac1ffc886d0" msprop:DbColumnName="nama_kegiatan" msprop:FriendlyName="nama_kegiatan">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="110" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="nama_himpunan" msprop:design-time-name="822a100d-505c-48ec-838f-e8ee46402e03" msprop:DbColumnName="nama_himpunan" msprop:FriendlyName="nama_himpunan">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="12" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="nama_ketua_himpunan" msprop:design-time-name="77c5a257-fe29-4d45-bd3d-29a89c2a383d" msprop:DbColumnName="nama_ketua_himpunan" msprop:FriendlyName="nama_ketua_himpunan">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="30" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="lama_pelaksanaan" msprop:design-time-name="7b08c486-233c-43de-8500-59c4996d3af1" msprop:DbColumnName="lama_pelaksanaan" msprop:FriendlyName="lama_pelaksanaan" type="xs:long" />
+                      <xs:element name="total_dana" msprop:design-time-name="650759c7-7e9b-4298-997b-fee7170c2422" msprop:DbColumnName="total_dana" msprop:FriendlyName="total_dana">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="12" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="jumlah_peserta" msprop:design-time-name="3e836b15-6ca2-439a-8ffe-f04966a8d76a" msprop:DbColumnName="jumlah_peserta" msprop:FriendlyName="jumlah_peserta" type="xs:long" />
+                      <xs:element name="pk_proker" msprop:design-time-name="d729ac0d-14d6-4bae-b63c-1ac3f0186f32" msprop:DbColumnName="pk_proker" msprop:FriendlyName="pk_proker" type="xs:long" />
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="dbo_fact_realisasi_kegiatan" msprop:design-time-name="9578964b-0fb1-4449-8bde-37dde4d75eca" msprop:FriendlyName="fact_realisasi_kegiatan" msprop:DbSchemaName="dbo" msprop:DbTableName="fact_realisasi_kegiatan" msprop:TableType="Table">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="fk_himapro" msprop:design-time-name="3e7083ab-69e9-4f0c-a884-62196bf2a8c9" msprop:DbColumnName="fk_himapro" msprop:FriendlyName="fk_himapro" type="xs:long" />
+                      <xs:element name="fk_proker" msprop:design-time-name="7edcb2ee-2267-41da-9549-7acd802777be" msprop:DbColumnName="fk_proker" msprop:FriendlyName="fk_proker" type="xs:long" />
+                      <xs:element name="fk_kegiatan" msprop:design-time-name="cbe62f60-7ccb-49bb-bf79-9c2dc389e6f8" msprop:DbColumnName="fk_kegiatan" msprop:FriendlyName="fk_kegiatan" type="xs:long" />
+                      <xs:element name="fk_anggaran" msprop:design-time-name="c2e4ee71-f43e-4630-98d4-86c7e234dccd" msprop:DbColumnName="fk_anggaran" msprop:FriendlyName="fk_anggaran" type="xs:long" />
+                      <xs:element name="fk_date" msprop:design-time-name="dad2f971-977a-464c-9d89-5d6d6af74e81" msprop:DbColumnName="fk_date" msprop:FriendlyName="fk_date" type="xs:short" />
+                      <xs:element name="jumlah_uang_diajukan" msprop:design-time-name="5f158f5e-ca09-458e-82c1-8c4ba1701a74" msprop:DbColumnName="jumlah_uang_diajukan" msprop:FriendlyName="jumlah_uang_diajukan" type="xs:long" />
+                      <xs:element name="jumlah_uang_diterima" msprop:design-time-name="dd6c6db6-af5c-4f10-a4b6-d87c800ba059" msprop:DbColumnName="jumlah_uang_diterima" msprop:FriendlyName="jumlah_uang_diterima" type="xs:long" />
+                      <xs:element name="jumlah_uang_digunakan" msprop:design-time-name="c73e7616-37a4-4662-9c4d-1d8b65b2b537" msprop:DbColumnName="jumlah_uang_digunakan" msprop:FriendlyName="jumlah_uang_digunakan" type="xs:long" />
+                      <xs:element name="jumlah_uang_dikembalikan" msprop:design-time-name="7dcc7308-d997-4719-9209-a1daa2f42054" msprop:DbColumnName="jumlah_uang_dikembalikan" msprop:FriendlyName="jumlah_uang_dikembalikan" type="xs:long" />
+                      <xs:element name="jumlah_peserta" msprop:design-time-name="d9d945c2-f925-4ecd-a920-3a1c022658c9" msprop:DbColumnName="jumlah_peserta" msprop:FriendlyName="jumlah_peserta" type="xs:long" />
+                      <xs:element name="jumlah_panitia" msprop:design-time-name="2d549e04-4090-4cd6-9b8e-92b695993ff6" msprop:DbColumnName="jumlah_panitia" msprop:FriendlyName="jumlah_panitia" type="xs:long" />
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+              </xs:choice>
+            </xs:complexType>
+            <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+              <xs:selector xpath=".//dbo_dim_anggaran" />
+              <xs:field xpath="pk_anggaran" />
+            </xs:unique>
+            <xs:unique name="dbo_dim_date_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+              <xs:selector xpath=".//dbo_dim_date" />
+              <xs:field xpath="pk_date" />
+            </xs:unique>
+            <xs:unique name="dbo_dim_himapro_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+              <xs:selector xpath=".//dbo_dim_himapro" />
+              <xs:field xpath="pk_himapro" />
+            </xs:unique>
+            <xs:unique name="dbo_dim_kegiatan_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+              <xs:selector xpath=".//dbo_dim_kegiatan" />
+              <xs:field xpath="pk_kegiatan" />
+            </xs:unique>
+            <xs:unique name="dbo_dim_proker_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+              <xs:selector xpath=".//dbo_dim_proker" />
+              <xs:field xpath="pk_proker" />
+            </xs:unique>
+            <xs:keyref name="FK16_dim_fact_pengajuan_dana" refer="Constraint1">
+              <xs:selector xpath=".//dbo_fact_realisasi_kegiatan" />
+              <xs:field xpath="fk_anggaran" />
+            </xs:keyref>
+            <xs:keyref name="FK13_dim_fact_pengajuan_dana" refer="dbo_dim_proker_Constraint1">
+              <xs:selector xpath=".//dbo_fact_realisasi_kegiatan" />
+              <xs:field xpath="fk_proker" />
+            </xs:keyref>
+            <xs:keyref name="FK12_dim_fact_pengajuan_dana" refer="dbo_dim_kegiatan_Constraint1">
+              <xs:selector xpath=".//dbo_fact_realisasi_kegiatan" />
+              <xs:field xpath="fk_kegiatan" />
+            </xs:keyref>
+            <xs:keyref name="FK14_dim_fact_pengajuan_dana" refer="dbo_dim_himapro_Constraint1">
+              <xs:selector xpath=".//dbo_fact_realisasi_kegiatan" />
+              <xs:field xpath="fk_himapro" />
+            </xs:keyref>
+            <xs:keyref name="FK15_dim_fact_pengajuan_dana" refer="dbo_dim_date_Constraint1">
+              <xs:selector xpath=".//dbo_fact_realisasi_kegiatan" />
+              <xs:field xpath="fk_date" />
+            </xs:keyref>
+          </xs:element>
+        </xs:schema>
+        <dsvProject_x0020_DWBI xmlns="" />
+      </Schema>
+    </DataSourceView>
+  </DataSourceViews>
+</Database>

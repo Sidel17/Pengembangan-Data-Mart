@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="dsProjectDWBI">
+  <ConnectionProperties>
+    <Extension>SQL</Extension>
+    <ConnectString>Data Source=DESKTOP-SSE3LD6\SQLEXPRESS;Initial Catalog=projectDWBI</ConnectString>
+    <IntegratedSecurity>true</IntegratedSecurity>
+    <Prompt>Specify a user name and password for data source dsProjectDWBI</Prompt>
+  </ConnectionProperties>
+  <DataSourceID>afa7e747-3c6e-4ca1-a6b0-f99f76217d69</DataSourceID>
+</RptDataSource>

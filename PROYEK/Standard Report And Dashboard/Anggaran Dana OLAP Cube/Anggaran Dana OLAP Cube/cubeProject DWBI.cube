@@ -1,0 +1,285 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="5a51c7e7-83d1-4b3f-800c-5131dec3282e" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>cubeProject DWBI</ID>
+  <Name>cubeProject DWBI</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="77dac0be-8804-4026-8c7b-66abc8886a70">
+      <ID>Dim Anggaran</ID>
+      <Name>Dim Anggaran</Name>
+      <DimensionID>Dim Anggaran</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="9a5f73c8-10d3-4bf5-8333-dfa125313da2">
+          <AttributeID>Pk Anggaran</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="fee2824d-45bb-49f7-a80f-f5114453412c">
+      <ID>Dim Proker</ID>
+      <Name>Dim Proker</Name>
+      <DimensionID>Dim Proker</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="4263f5e7-5e93-433f-a12f-19c6dce4c7c7">
+          <AttributeID>Pk Proker</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="bc6bb609-210a-4567-aeea-75979bcb2084">
+      <ID>Dim Kegiatan</ID>
+      <Name>Dim Kegiatan</Name>
+      <DimensionID>Dim Kegiatan</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="63ca84f4-43f9-41c4-bf7e-4750775ef300">
+          <AttributeID>Pk Kegiatan</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="cd56d5ff-1a14-4329-aa5f-7c26c3231161">
+      <ID>Dim Himapro</ID>
+      <Name>Dim Himapro</Name>
+      <DimensionID>Dim Himapro</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="6ed706fa-e21c-4428-a6bc-0c20effdb202">
+          <AttributeID>Pk Himapro</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="1c2e8a91-67f5-4c87-935e-75a7b45e4e28">
+      <ID>Dim Date</ID>
+      <Name>Dim Date</Name>
+      <DimensionID>Dim Date</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="c1ea0213-cb37-4e39-a226-1b8d048bdf0f">
+          <AttributeID>Pk Date</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="69100dd4-f7e0-4390-8d54-c69f0553a09a">
+      <ID>Fact Realisasi Kegiatan</ID>
+      <Name>Fact Realisasi Kegiatan</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="90c8444c-e5c1-4aae-9159-3721b897e5d1">
+          <ID>Jumlah Uang Diajukan</ID>
+          <Name>Jumlah Uang Diajukan</Name>
+          <Source dwd:design-time-name="d5d80600-9033-41d4-bd8b-9d64282b3ea0">
+            <DataType>BigInt</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="a120368d-3521-4356-afa1-3170665d186b">
+              <TableID>dbo_fact_realisasi_kegiatan</TableID>
+              <ColumnID>jumlah_uang_diajukan</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="fc38563e-f922-4130-9387-55c029e396b7">
+          <ID>Jumlah Uang Diterima</ID>
+          <Name>Jumlah Uang Diterima</Name>
+          <Source dwd:design-time-name="5661203e-58f3-46f6-bd8d-805f78b503cb">
+            <DataType>BigInt</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="0ac17e7d-e1f8-43e8-b1f6-b4c7b5af0617">
+              <TableID>dbo_fact_realisasi_kegiatan</TableID>
+              <ColumnID>jumlah_uang_diterima</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="0e186464-5e1d-4e50-ad9b-5202494fd44a">
+          <ID>Jumlah Uang Digunakan</ID>
+          <Name>Jumlah Uang Digunakan</Name>
+          <Source dwd:design-time-name="8a9d5f4f-b834-4757-9922-4dec7caf97fb">
+            <DataType>BigInt</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="d6e3c8a4-3f0d-4e2e-bccd-3966bfd08acd">
+              <TableID>dbo_fact_realisasi_kegiatan</TableID>
+              <ColumnID>jumlah_uang_digunakan</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="a09c995f-6ed5-42eb-9448-7c2c01a70964">
+          <ID>Jumlah Uang Dikembalikan</ID>
+          <Name>Jumlah Uang Dikembalikan</Name>
+          <Source dwd:design-time-name="d7d97136-c60f-423a-bb2a-97e07ee14d01">
+            <DataType>BigInt</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="bc660939-26ce-4cd5-be86-0ef8b38973dc">
+              <TableID>dbo_fact_realisasi_kegiatan</TableID>
+              <ColumnID>jumlah_uang_dikembalikan</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="bc214632-2d03-4942-923a-fcbc843de871">
+          <ID>Jumlah Peserta</ID>
+          <Name>Jumlah Peserta</Name>
+          <Source dwd:design-time-name="bbfedfc7-faf7-441b-8e22-3cde0e832848">
+            <DataType>BigInt</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="12c49262-c25c-42ec-bcbe-049971026392">
+              <TableID>dbo_fact_realisasi_kegiatan</TableID>
+              <ColumnID>jumlah_peserta</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="e06444dd-ffc3-4efa-8594-e194b67b9db7">
+          <ID>Jumlah Panitia</ID>
+          <Name>Jumlah Panitia</Name>
+          <Source dwd:design-time-name="0e4e4a51-4a1e-4069-b22a-41f9153e842b">
+            <DataType>BigInt</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="a482508b-12b7-4950-872a-dcd1315b805c">
+              <TableID>dbo_fact_realisasi_kegiatan</TableID>
+              <ColumnID>jumlah_panitia</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="db4ab2ad-c700-4692-8fe0-6836ad2fced8">
+          <ID>Fact Realisasi Kegiatan Count</ID>
+          <Name>Fact Realisasi Kegiatan Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="6755ca2f-0b30-445b-895d-2ac825c2291e">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="ede0b6d7-e853-4982-8397-8f81b22893a5">
+              <TableID>dbo_fact_realisasi_kegiatan</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="407e83c3-288d-4e3e-930e-3ab1624e61d7">
+          <CubeDimensionID>Dim Anggaran</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="5531eb7a-68b2-4682-89a4-47fa86077495">
+              <AttributeID>Pk Anggaran</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="9f40f607-7561-4a09-8b50-ab9c3a7cc13c">
+                  <DataType>BigInt</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="90ed31bb-3c16-4d0d-ad8c-cf42355c567d">
+                    <TableID>dbo_fact_realisasi_kegiatan</TableID>
+                    <ColumnID>fk_anggaran</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="f513ba88-96ff-467a-8f5a-3a817596ff04">
+          <CubeDimensionID>Dim Proker</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="42cf74ea-3317-4e02-965a-781623197097">
+              <AttributeID>Pk Proker</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="0f81b5da-2881-453c-b4ef-c9dd359015cd">
+                  <DataType>BigInt</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="1e498bd9-3855-4450-aeb5-4654b8d869a3">
+                    <TableID>dbo_fact_realisasi_kegiatan</TableID>
+                    <ColumnID>fk_proker</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="f2eaa90d-d925-4070-a702-39a399b3f513">
+          <CubeDimensionID>Dim Kegiatan</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="83a19f90-36ff-47f2-91c1-9be65898c96f">
+              <AttributeID>Pk Kegiatan</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="3abc66c6-239d-444b-bbeb-3b4865be3d81">
+                  <DataType>BigInt</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="f8cb0f45-143d-40c0-bcbb-58283ae8830e">
+                    <TableID>dbo_fact_realisasi_kegiatan</TableID>
+                    <ColumnID>fk_kegiatan</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="1d9214d1-2ee4-4f2d-a00f-7633e7b6f3ff">
+          <CubeDimensionID>Dim Himapro</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="a8fa58d2-1637-4e0c-b8c2-b631b7fe125b">
+              <AttributeID>Pk Himapro</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="f63b8769-380f-4d96-8cd1-0183138ae524">
+                  <DataType>BigInt</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="2394031f-c0cd-4447-84fa-ad67ce5a014b">
+                    <TableID>dbo_fact_realisasi_kegiatan</TableID>
+                    <ColumnID>fk_himapro</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="da32f188-9521-4850-85dd-6eb609b7c15c">
+          <CubeDimensionID>Dim Date</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="9d244ea4-7496-4829-a8df-e2ba5231fc2c">
+              <AttributeID>Pk Date</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="cd36ee1e-a438-4ada-b167-f0f92f57d9fd">
+                  <DataType>SmallInt</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="0ed84899-cdf5-4ec1-8251-e889b566a537">
+                    <TableID>dbo_fact_realisasi_kegiatan</TableID>
+                    <ColumnID>fk_date</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="a86b13e6-679d-4ddb-b272-4174ce3888ef">
+    <DataSourceViewID>dsvProject DWBI</DataSourceViewID>
+  </Source>
+</Cube>
